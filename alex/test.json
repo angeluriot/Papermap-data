@@ -1,0 +1,704 @@
+{
+	"meta": {
+		"count": 4873,
+		"db_response_time_ms": 836,
+		"page": 1,
+		"per_page": 1,
+		"groups_count": null
+	},
+	"results": [
+		{
+			"id": "https://openalex.org/W2010228015",
+			"doi": "https://doi.org/10.1016/0145-2134(86)90036-0",
+			"title": "Evaluation of a brief intervention for educating school children in awareness of physical and sexual abuse",
+			"display_name": "Evaluation of a brief intervention for educating school children in awareness of physical and sexual abuse",
+			"relevance_score": 2733.2737,
+			"publication_year": 1986,
+			"publication_date": "1986-01-01",
+			"ids": {
+				"openalex": "https://openalex.org/W2010228015",
+				"doi": "https://doi.org/10.1016/0145-2134(86)90036-0",
+				"mag": "2010228015",
+				"pmid": "https://pubmed.ncbi.nlm.nih.gov/3955433"
+			},
+			"language": "fr",
+			"primary_location": {
+				"is_oa": false,
+				"landing_page_url": "https://doi.org/10.1016/0145-2134(86)90036-0",
+				"pdf_url": null,
+				"source": {
+					"id": "https://openalex.org/S53055215",
+					"display_name": "Child Abuse & Neglect",
+					"issn_l": "0145-2134",
+					"issn": [
+						"0145-2134",
+						"1873-7757"
+					],
+					"is_oa": false,
+					"is_in_doaj": false,
+					"is_indexed_in_scopus": true,
+					"is_core": true,
+					"host_organization": "https://openalex.org/P4310320990",
+					"host_organization_name": "Elsevier BV",
+					"host_organization_lineage": [
+						"https://openalex.org/P4310320990"
+					],
+					"host_organization_lineage_names": [
+						"Elsevier BV"
+					],
+					"type": "journal"
+				},
+				"license": null,
+				"license_id": null,
+				"version": null,
+				"is_accepted": false,
+				"is_published": false
+			},
+			"type": "article",
+			"type_crossref": "journal-article",
+			"indexed_in": [
+				"crossref",
+				"pubmed"
+			],
+			"open_access": {
+				"is_oa": false,
+				"oa_status": "closed",
+				"oa_url": null,
+				"any_repository_has_fulltext": false
+			},
+			"authorships": [
+				{
+					"author_position": "first",
+					"author": {
+						"id": "https://openalex.org/A5086017188",
+						"display_name": "David A. Wolfe",
+						"orcid": "https://orcid.org/0000-0003-1658-0903"
+					},
+					"institutions": [
+						{
+							"id": "https://openalex.org/I125749732",
+							"display_name": "Western University",
+							"ror": "https://ror.org/02grkyz14",
+							"country_code": "CA",
+							"type": "funder",
+							"lineage": [
+								"https://openalex.org/I125749732"
+							]
+						}
+					],
+					"countries": [
+						"CA"
+					],
+					"is_corresponding": false,
+					"raw_author_name": "David A. Wolfe",
+					"raw_affiliation_strings": [
+						"The University of Western Ontario , London, Canada"
+					],
+					"affiliations": [
+						{
+							"raw_affiliation_string": "The University of Western Ontario , London, Canada",
+							"institution_ids": [
+								"https://openalex.org/I125749732"
+							]
+						}
+					]
+				},
+				{
+					"author_position": "middle",
+					"author": {
+						"id": "https://openalex.org/A5072431481",
+						"display_name": "Tracy Macpherson",
+						"orcid": null
+					},
+					"institutions": [
+						{
+							"id": "https://openalex.org/I153297377",
+							"display_name": "Medical University of South Carolina",
+							"ror": "https://ror.org/012jban78",
+							"country_code": "US",
+							"type": "funder",
+							"lineage": [
+								"https://openalex.org/I153297377"
+							]
+						}
+					],
+					"countries": [
+						"US"
+					],
+					"is_corresponding": false,
+					"raw_author_name": "Tracy Macpherson",
+					"raw_affiliation_strings": [
+						"Medical University of South Carolina, USA."
+					],
+					"affiliations": [
+						{
+							"raw_affiliation_string": "Medical University of South Carolina, USA.",
+							"institution_ids": [
+								"https://openalex.org/I153297377"
+							]
+						}
+					]
+				},
+				{
+					"author_position": "middle",
+					"author": {
+						"id": "https://openalex.org/A5009948968",
+						"display_name": "Ronald L. Blount",
+						"orcid": null
+					},
+					"institutions": [
+						{
+							"id": "https://openalex.org/I17301866",
+							"display_name": "University of Alabama",
+							"ror": "https://ror.org/03xrrjk67",
+							"country_code": "US",
+							"type": "funder",
+							"lineage": [
+								"https://openalex.org/I17301866"
+							]
+						}
+					],
+					"countries": [
+						"US"
+					],
+					"is_corresponding": false,
+					"raw_author_name": "Ronald Blount",
+					"raw_affiliation_strings": [
+						"The University of Alabama; USA"
+					],
+					"affiliations": [
+						{
+							"raw_affiliation_string": "The University of Alabama; USA",
+							"institution_ids": [
+								"https://openalex.org/I17301866"
+							]
+						}
+					]
+				},
+				{
+					"author_position": "last",
+					"author": {
+						"id": "https://openalex.org/A5086017188",
+						"display_name": "David A. Wolfe",
+						"orcid": "https://orcid.org/0000-0003-1658-0903"
+					},
+					"institutions": [
+						{
+							"id": "https://openalex.org/I125749732",
+							"display_name": "Western University",
+							"ror": "https://ror.org/02grkyz14",
+							"country_code": "CA",
+							"type": "funder",
+							"lineage": [
+								"https://openalex.org/I125749732"
+							]
+						}
+					],
+					"countries": [
+						"CA"
+					],
+					"is_corresponding": false,
+					"raw_author_name": "Vicky V. Wolfe",
+					"raw_affiliation_strings": [
+						" The University of Western Ontario, Canada"
+					],
+					"affiliations": [
+						{
+							"raw_affiliation_string": " The University of Western Ontario, Canada",
+							"institution_ids": [
+								"https://openalex.org/I125749732"
+							]
+						}
+					]
+				}
+			],
+			"institution_assertions": [],
+			"countries_distinct_count": 2,
+			"institutions_distinct_count": 3,
+			"corresponding_author_ids": [],
+			"corresponding_institution_ids": [],
+			"apc_list": {
+				"value": 3980,
+				"currency": "USD",
+				"value_usd": 3980
+			},
+			"apc_paid": null,
+			"fwci": 9.253,
+			"has_fulltext": true,
+			"fulltext_origin": "ngrams",
+			"cited_by_count": 68,
+			"citation_normalized_percentile": {
+				"value": 0.921109,
+				"is_in_top_1_percent": false,
+				"is_in_top_10_percent": true
+			},
+			"cited_by_percentile_year": {
+				"min": 95,
+				"max": 96
+			},
+			"biblio": {
+				"volume": "10",
+				"issue": "1",
+				"first_page": "85",
+				"last_page": "92"
+			},
+			"is_retracted": false,
+			"is_paratext": false,
+			"primary_topic": {
+				"id": "https://openalex.org/T10426",
+				"display_name": "Child Abuse and Trauma",
+				"score": 0.9987,
+				"subfield": {
+					"id": "https://openalex.org/subfields/3203",
+					"display_name": "Clinical Psychology"
+				},
+				"field": {
+					"id": "https://openalex.org/fields/32",
+					"display_name": "Psychology"
+				},
+				"domain": {
+					"id": "https://openalex.org/domains/2",
+					"display_name": "Social Sciences"
+				}
+			},
+			"topics": [
+				{
+					"id": "https://openalex.org/T10426",
+					"display_name": "Child Abuse and Trauma",
+					"score": 0.9987,
+					"subfield": {
+						"id": "https://openalex.org/subfields/3203",
+						"display_name": "Clinical Psychology"
+					},
+					"field": {
+						"id": "https://openalex.org/fields/32",
+						"display_name": "Psychology"
+					},
+					"domain": {
+						"id": "https://openalex.org/domains/2",
+						"display_name": "Social Sciences"
+					}
+				},
+				{
+					"id": "https://openalex.org/T10826",
+					"display_name": "Behavioral and Psychological Studies",
+					"score": 0.9962,
+					"subfield": {
+						"id": "https://openalex.org/subfields/3204",
+						"display_name": "Developmental and Educational Psychology"
+					},
+					"field": {
+						"id": "https://openalex.org/fields/32",
+						"display_name": "Psychology"
+					},
+					"domain": {
+						"id": "https://openalex.org/domains/2",
+						"display_name": "Social Sciences"
+					}
+				},
+				{
+					"id": "https://openalex.org/T10182",
+					"display_name": "Child and Adolescent Psychosocial and Emotional Development",
+					"score": 0.9932,
+					"subfield": {
+						"id": "https://openalex.org/subfields/3203",
+						"display_name": "Clinical Psychology"
+					},
+					"field": {
+						"id": "https://openalex.org/fields/32",
+						"display_name": "Psychology"
+					},
+					"domain": {
+						"id": "https://openalex.org/domains/2",
+						"display_name": "Social Sciences"
+					}
+				}
+			],
+			"keywords": [
+				{
+					"id": "https://openalex.org/keywords/sophistication",
+					"display_name": "Sophistication",
+					"score": 0.80389166
+				},
+				{
+					"id": "https://openalex.org/keywords/scope",
+					"display_name": "Scope (computer science)",
+					"score": 0.51958513
+				},
+				{
+					"id": "https://openalex.org/keywords/physical-abuse",
+					"display_name": "Physical abuse",
+					"score": 0.4890812
+				},
+				{
+					"id": "https://openalex.org/keywords/child-sexual-abuse",
+					"display_name": "Child sexual abuse",
+					"score": 0.43604177
+				}
+			],
+			"concepts": [
+				{
+					"id": "https://openalex.org/C168725872",
+					"wikidata": "https://www.wikidata.org/wiki/Q991663",
+					"display_name": "Sophistication",
+					"level": 2,
+					"score": 0.80389166
+				},
+				{
+					"id": "https://openalex.org/C2780665704",
+					"wikidata": "https://www.wikidata.org/wiki/Q959298",
+					"display_name": "Intervention (counseling)",
+					"level": 2,
+					"score": 0.6822674
+				},
+				{
+					"id": "https://openalex.org/C2992354236",
+					"wikidata": "https://www.wikidata.org/wiki/Q43414",
+					"display_name": "Sexual abuse",
+					"level": 4,
+					"score": 0.67530453
+				},
+				{
+					"id": "https://openalex.org/C15744967",
+					"wikidata": "https://www.wikidata.org/wiki/Q9418",
+					"display_name": "Psychology",
+					"level": 0,
+					"score": 0.625842
+				},
+				{
+					"id": "https://openalex.org/C2993946119",
+					"wikidata": "https://www.wikidata.org/wiki/Q167191",
+					"display_name": "Child abuse",
+					"level": 4,
+					"score": 0.5613808
+				},
+				{
+					"id": "https://openalex.org/C2778012447",
+					"wikidata": "https://www.wikidata.org/wiki/Q1034415",
+					"display_name": "Scope (computer science)",
+					"level": 2,
+					"score": 0.51958513
+				},
+				{
+					"id": "https://openalex.org/C2780416715",
+					"wikidata": "https://www.wikidata.org/wiki/Q2827132",
+					"display_name": "Physical abuse",
+					"level": 5,
+					"score": 0.4890812
+				},
+				{
+					"id": "https://openalex.org/C2994049219",
+					"wikidata": "https://www.wikidata.org/wiki/Q26553",
+					"display_name": "Child sexual abuse",
+					"level": 5,
+					"score": 0.43604177
+				},
+				{
+					"id": "https://openalex.org/C3017944768",
+					"wikidata": "https://www.wikidata.org/wiki/Q1450463",
+					"display_name": "Poison control",
+					"level": 2,
+					"score": 0.41156763
+				},
+				{
+					"id": "https://openalex.org/C138496976",
+					"wikidata": "https://www.wikidata.org/wiki/Q175002",
+					"display_name": "Developmental psychology",
+					"level": 1,
+					"score": 0.39726025
+				},
+				{
+					"id": "https://openalex.org/C526869908",
+					"wikidata": "https://www.wikidata.org/wiki/Q3298118",
+					"display_name": "Suicide prevention",
+					"level": 3,
+					"score": 0.3801033
+				},
+				{
+					"id": "https://openalex.org/C70410870",
+					"wikidata": "https://www.wikidata.org/wiki/Q199906",
+					"display_name": "Clinical psychology",
+					"level": 1,
+					"score": 0.3795895
+				},
+				{
+					"id": "https://openalex.org/C509550671",
+					"wikidata": "https://www.wikidata.org/wiki/Q126945",
+					"display_name": "Medical education",
+					"level": 1,
+					"score": 0.33720952
+				},
+				{
+					"id": "https://openalex.org/C71924100",
+					"wikidata": "https://www.wikidata.org/wiki/Q11190",
+					"display_name": "Medicine",
+					"level": 0,
+					"score": 0.31392485
+				},
+				{
+					"id": "https://openalex.org/C118552586",
+					"wikidata": "https://www.wikidata.org/wiki/Q7867",
+					"display_name": "Psychiatry",
+					"level": 1,
+					"score": 0.22689453
+				},
+				{
+					"id": "https://openalex.org/C545542383",
+					"wikidata": "https://www.wikidata.org/wiki/Q2751242",
+					"display_name": "Medical emergency",
+					"level": 1,
+					"score": 0.11709201
+				},
+				{
+					"id": "https://openalex.org/C36289849",
+					"wikidata": "https://www.wikidata.org/wiki/Q34749",
+					"display_name": "Social science",
+					"level": 1,
+					"score": 0
+				},
+				{
+					"id": "https://openalex.org/C144024400",
+					"wikidata": "https://www.wikidata.org/wiki/Q21201",
+					"display_name": "Sociology",
+					"level": 0,
+					"score": 0
+				},
+				{
+					"id": "https://openalex.org/C41008148",
+					"wikidata": "https://www.wikidata.org/wiki/Q21198",
+					"display_name": "Computer science",
+					"level": 0,
+					"score": 0
+				},
+				{
+					"id": "https://openalex.org/C199360897",
+					"wikidata": "https://www.wikidata.org/wiki/Q9143",
+					"display_name": "Programming language",
+					"level": 1,
+					"score": 0
+				}
+			],
+			"mesh": [
+				{
+					"descriptor_ui": "D002649",
+					"descriptor_name": "Child Abuse",
+					"qualifier_ui": "Q000517",
+					"qualifier_name": "prevention & control",
+					"is_major_topic": true
+				},
+				{
+					"descriptor_ui": "D006266",
+					"descriptor_name": "Health Education",
+					"qualifier_ui": "",
+					"qualifier_name": null,
+					"is_major_topic": true
+				},
+				{
+					"descriptor_ui": "D002648",
+					"descriptor_name": "Child",
+					"qualifier_ui": "",
+					"qualifier_name": null,
+					"is_major_topic": false
+				},
+				{
+					"descriptor_ui": "D002649",
+					"descriptor_name": "Child Abuse",
+					"qualifier_ui": "",
+					"qualifier_name": null,
+					"is_major_topic": false
+				},
+				{
+					"descriptor_ui": "D005260",
+					"descriptor_name": "Female",
+					"qualifier_ui": "",
+					"qualifier_name": null,
+					"is_major_topic": false
+				},
+				{
+					"descriptor_ui": "D006801",
+					"descriptor_name": "Humans",
+					"qualifier_ui": "",
+					"qualifier_name": null,
+					"is_major_topic": false
+				},
+				{
+					"descriptor_ui": "D008297",
+					"descriptor_name": "Male",
+					"qualifier_ui": "",
+					"qualifier_name": null,
+					"is_major_topic": false
+				},
+				{
+					"descriptor_ui": "D011678",
+					"descriptor_name": "Punishment",
+					"qualifier_ui": "",
+					"qualifier_name": null,
+					"is_major_topic": false
+				},
+				{
+					"descriptor_ui": "D012574",
+					"descriptor_name": "Schools",
+					"qualifier_ui": "",
+					"qualifier_name": null,
+					"is_major_topic": false
+				},
+				{
+					"descriptor_ui": "D012650",
+					"descriptor_name": "Self Disclosure",
+					"qualifier_ui": "",
+					"qualifier_name": null,
+					"is_major_topic": false
+				},
+				{
+					"descriptor_ui": "D012742",
+					"descriptor_name": "Sex Offenses",
+					"qualifier_ui": "",
+					"qualifier_name": null,
+					"is_major_topic": false
+				}
+			],
+			"locations_count": 2,
+			"locations": [
+				{
+					"is_oa": false,
+					"landing_page_url": "https://doi.org/10.1016/0145-2134(86)90036-0",
+					"pdf_url": null,
+					"source": {
+						"id": "https://openalex.org/S53055215",
+						"display_name": "Child Abuse & Neglect",
+						"issn_l": "0145-2134",
+						"issn": [
+							"0145-2134",
+							"1873-7757"
+						],
+						"is_oa": false,
+						"is_in_doaj": false,
+						"is_indexed_in_scopus": true,
+						"is_core": true,
+						"host_organization": "https://openalex.org/P4310320990",
+						"host_organization_name": "Elsevier BV",
+						"host_organization_lineage": [
+							"https://openalex.org/P4310320990"
+						],
+						"host_organization_lineage_names": [
+							"Elsevier BV"
+						],
+						"type": "journal"
+					},
+					"license": null,
+					"license_id": null,
+					"version": null,
+					"is_accepted": false,
+					"is_published": false
+				},
+				{
+					"is_oa": false,
+					"landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/3955433",
+					"pdf_url": null,
+					"source": {
+						"id": "https://openalex.org/S4306525036",
+						"display_name": "PubMed",
+						"issn_l": null,
+						"issn": null,
+						"is_oa": false,
+						"is_in_doaj": false,
+						"is_indexed_in_scopus": false,
+						"is_core": false,
+						"host_organization": "https://openalex.org/I1299303238",
+						"host_organization_name": "National Institutes of Health",
+						"host_organization_lineage": [
+							"https://openalex.org/I1299303238"
+						],
+						"host_organization_lineage_names": [
+							"National Institutes of Health"
+						],
+						"type": "repository"
+					},
+					"license": null,
+					"license_id": null,
+					"version": null,
+					"is_accepted": false,
+					"is_published": false
+				}
+			],
+			"best_oa_location": null,
+			"sustainable_development_goals": [
+				{
+					"score": 0.63,
+					"display_name": "Gender equality",
+					"id": "https://metadata.un.org/sdg/5"
+				}
+			],
+			"grants": [],
+			"datasets": [],
+			"versions": [],
+			"referenced_works_count": 16,
+			"referenced_works": [
+				"https://openalex.org/W1708122172",
+				"https://openalex.org/W1968947991",
+				"https://openalex.org/W1985431871",
+				"https://openalex.org/W2020543623",
+				"https://openalex.org/W2023227051",
+				"https://openalex.org/W2026059062",
+				"https://openalex.org/W2027282361",
+				"https://openalex.org/W2032354443",
+				"https://openalex.org/W2062567035",
+				"https://openalex.org/W2073624679",
+				"https://openalex.org/W2094419105",
+				"https://openalex.org/W2094849546",
+				"https://openalex.org/W2119642692",
+				"https://openalex.org/W2517410697",
+				"https://openalex.org/W2796003714",
+				"https://openalex.org/W2945921346"
+			],
+			"related_works": [
+				"https://openalex.org/W653716417",
+				"https://openalex.org/W4254625011",
+				"https://openalex.org/W4247823525",
+				"https://openalex.org/W2152499423",
+				"https://openalex.org/W2144473606",
+				"https://openalex.org/W2108726098",
+				"https://openalex.org/W2090927984",
+				"https://openalex.org/W2044008602",
+				"https://openalex.org/W2029706227",
+				"https://openalex.org/W1498673356"
+			],
+			"abstract_inverted_index": null,
+			"abstract_inverted_index_v3": null,
+			"cited_by_api_url": "https://api.openalex.org/works?filter=cites:W2010228015",
+			"counts_by_year": [
+				{
+					"year": 2022,
+					"cited_by_count": 2
+				},
+				{
+					"year": 2021,
+					"cited_by_count": 2
+				},
+				{
+					"year": 2020,
+					"cited_by_count": 1
+				},
+				{
+					"year": 2019,
+					"cited_by_count": 2
+				},
+				{
+					"year": 2016,
+					"cited_by_count": 2
+				},
+				{
+					"year": 2015,
+					"cited_by_count": 3
+				},
+				{
+					"year": 2014,
+					"cited_by_count": 2
+				}
+			],
+			"updated_date": "2025-04-24T09:12:43.300873",
+			"created_date": "2016-06-24"
+		}
+	],
+	"group_by": []
+}

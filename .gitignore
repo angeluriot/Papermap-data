@@ -1,1 +1,4 @@
 /venv
+/data/openalex/raw
+__pycache__
+.DS_Store

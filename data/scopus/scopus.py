@@ -21,7 +21,6 @@ def get_data(file: str, sheet: str) -> list[dict[str, str | Any]]:
 			continue
 
 		journals.append({
-			'id': None,
 			'scopus_id': str(row['Sourcerecord ID']).strip(),
 			'issns': remove_duplicates([clean_issn(row['ISSN']), clean_issn(row['EISSN'])]),
 			'title': clean_text(row['Source Title']),
@@ -34,7 +33,6 @@ def get_data(file: str, sheet: str) -> list[dict[str, str | Any]]:
 				FIELD_TO_ID[ID_TO_FIELD[int(field.strip())].lower()]
 				for field in str(row['All Science Journal Classification Codes (ASJC)']).strip().split(';') if field.strip() != ''
 			])),
-			'link': None,
 			'metrics': {},
 		})
 

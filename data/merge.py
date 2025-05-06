@@ -1,3 +1,4 @@
+from copy import deepcopy
 from data.utils import *
 import numpy as np
 
@@ -187,7 +188,7 @@ def filter_pairs(
 
 		points *= 4_000
 		points += round(np.mean(row['metrics'].get('h', []))) if len(row['metrics'].get('h', [])) > 0 else 0
-		points += round(np.mean(journal['metrics'].get('h', []))) if len(journal['metrics'].get('h', [])) > 0 else 0
+		points += journal['metrics'].get('h', 0)
 
 		scores.append((r, j, points))
 
@@ -214,10 +215,16 @@ def update(
 	exact_matches: dict[int, str],
 ) -> tuple[dict[str, dict[str, Any]], dict[str, dict[str, Any]]]:
 
+	journals_updated = 0
+	publishers_updated = set()
+
 	for r, j in exact_matches.items():
 
 		row = data[r]
 		journal = journals[j]
+		journal_copy = deepcopy(journal)
+		publisher = publishers.get(journal['publisher'])
+		publisher_copy = deepcopy(publisher)
 
 		if journal['scopus_id'] is None:
 			journal['scopus_id'] = row['scopus_id']
@@ -234,8 +241,8 @@ def update(
 		if journal['last_year'] is None:
 			journal['last_year'] = row['last_year']
 
-		if publishers.get(journal['publisher']) is not None:
-			publishers[journal['publisher']]['titles'] = remove_duplicates(publishers[journal['publisher']]['titles'] + row['publisher_titles'])
+		if publisher is not None:
+			publisher['titles'] = remove_duplicates(publisher['titles'] + row['publisher_titles'])
 
 		journal['fields'] = remove_duplicates(journal['fields'] + row['fields'])
 
@@ -245,5 +252,14 @@ def update(
 
 			if value is not None:
 				journal['metrics'][key].append(value)
+
+		if journal != journal_copy:
+			journals_updated += 1
+
+		if publisher is not None and publisher != publisher_copy:
+			publishers_updated.add(publisher['id'])
+
+	print(f'{journals_updated:,} ({(journals_updated / len(journals)) * 100:.2f} %) journals updated')
+	print(f'{len(publishers_updated):,} ({(len(publishers_updated) / len(publishers)) * 100:.2f} %) publishers updated')
 
 	return publishers, journals

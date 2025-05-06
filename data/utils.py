@@ -57,4 +57,17 @@ def clean_id(id: str | None) -> str:
 
 
 def over_clean_text(text: str) -> str:
-	return ''.join([c for c in text.strip().replace('&', 'and').lower() if c.isalpha() or c.isnumeric()])
+	return ''.join([c for c in text.replace('&', 'and').lower().strip() if c.isalpha() or c.isnumeric()])
+
+
+def clean_number(text: str) -> float | int | None:
+	cleaned = text.replace(',', '.').strip()
+
+	if not cleaned.replace('.', '').isnumeric():
+		return None
+
+	return float(cleaned) if '.' in cleaned else int(cleaned)
+
+
+def n_sum(list: list[float | None]) -> float:
+	return sum([x for x in list if x is not None])

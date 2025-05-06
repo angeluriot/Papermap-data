@@ -1,26 +1,43 @@
-import os, csv
+from typing import Any
 from data.utils import *
 from data.fields import *
+import pandas as pd
 
-def get_data():
-	with open('./raw/journals_cleaned.csv', 'r', encoding='utf-8') as f:
-		journals_data = f.read().splitlines()
 
-	journals = {}
+def get_data(file: str, sheet: str) -> list[dict[str, str | Any]]:
+	df = pd.read_excel(
+		io=f'data/scopus/raw/{file}',
+		dtype=str,
+		keep_default_na=False,
+		na_values=[],
+		sheet_name=sheet,
+		engine='openpyxl',
+	)
 
-	for journal_data in journals_data:
+	journals = []
 
-		data = journal_data.split('°')
-
-		if data[7].lower().strip() != 'journal':
+	for _, row in df.iterrows():
+		if str(row['Source Type']).lower().strip() != 'journal':
 			continue
 
-		journals[data[0].strip()] = {
-			'scopus_id': data[0].strip(),
-			'titles': clean_list([data[1], data[8], data[9], data[10], data[11]]),
-			'issns': remove_duplicates([clean_issn(data[2]), clean_issn(data[3])]),
-			'active': data[4].strip() == 'Active' and data[6].strip() != '',
-			'last_year': int(data[5].strip()[-4:]) if data[5].strip() != '' else None,
-			'publisher_titles': clean_list([data[12], data[13]]),
-			'fields': sorted(remove_duplicates([FIELD_TO_ID[ID_TO_FIELD[int(field.strip())]] for field in data[14].strip().split(';') if field != ''])),
-		}
+		journals.append({
+			'id': None,
+			'scopus_id': str(row['Sourcerecord ID']).strip(),
+			'issns': remove_duplicates([clean_issn(row['ISSN']), clean_issn(row['EISSN'])]),
+			'title': clean_text(row['Source Title']),
+			'titles': clean_list([row['Related Title 1'], row['Other Related Title 2'], row['Other Related Title 3'], row['Other Related Title 4']]),
+			'active': str(row['Active or Inactive']).strip() == 'Active',
+			'in_scopus': str(row['Titles Discontinued by Scopus Due to Quality Issues']).strip() == '',
+			'last_year': int(str(row['Coverage']).strip()[-4:]) if str(row['Coverage']).strip() != '' else None,
+			'publisher_titles': clean_list([row['Publisher Imprints Grouped to Main Publisher'], row['Publisher']]),
+			'fields': sorted(remove_duplicates([
+				FIELD_TO_ID[ID_TO_FIELD[int(field.strip())].lower()]
+				for field in str(row['All Science Journal Classification Codes (ASJC)']).strip().split(';') if field.strip() != ''
+			])),
+			'link': None,
+			'metrics': {},
+		})
+
+	print(f'Loaded {len(journals):,} journals')
+
+	return journals

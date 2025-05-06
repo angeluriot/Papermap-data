@@ -20,7 +20,7 @@ def get_dict(dict: dict[str, dict[str, Any] | None], key: str) -> dict[str, Any]
 
 
 def clean_text(text: str) -> str:
-	cleaned = html.unescape(text).replace('&quot;', '"').strip()
+	cleaned = html.unescape(str(text)).replace('&quot;', '"').strip()
 
 	if '<' in cleaned and '>' in cleaned:
 		parts = cleaned.split('&')
@@ -39,19 +39,22 @@ def clean_text(text: str) -> str:
 
 
 def clean_issn(issn: str) -> str:
-	return ''.join([c for c in issn if c.isalpha() or c.isnumeric()]).upper().strip()
+	return ''.join([c for c in str(issn) if c.isalpha() or c.isnumeric()]).upper().strip()
 
 
-def remove_duplicates(lst: list) -> list:
-	cleaned_lst = [x for x in lst if x != '' and x is not None]
+def remove_duplicates(list: list) -> list:
+	cleaned_list = [x for x in list if x != '' and x is not None]
 	seen = set()
-	return [x for x in cleaned_lst if not (x in seen or seen.add(x))]
+	return [x for x in cleaned_list if not (x in seen or seen.add(x))]
 
 
 def clean_list(list: list[str | None]) -> list[str]:
-	cleaned = [clean_text(item) for item in list if item is not None]
-	return remove_duplicates([item for item in cleaned if item != ''])
+	return remove_duplicates([clean_text(item) for item in list if item is not None])
 
 
 def clean_id(id: str | None) -> str:
-	return id.replace('https://openalex.org/', '').upper().strip() if id is not None else ''
+	return str(id).replace('https://openalex.org/', '').upper().strip() if id is not None else ''
+
+
+def over_clean_text(text: str) -> str:
+	return ''.join([c for c in text.strip().replace('&', 'and').lower() if c.isalpha() or c.isnumeric()])

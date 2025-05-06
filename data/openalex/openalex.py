@@ -31,25 +31,16 @@ def import_raw(url: str, output: str):
 					out_file.write(line + '\n')
 
 
-def process_publishers(verbose: bool = False) -> tuple[
+def process_publishers() -> tuple[
 	dict[str, dict[str, Any]],
  	dict[str, dict[str, Any]],
 	dict[str, dict[str, Any]],
 ]:
-	if verbose:
-		print('Publishers...')
-
 	raw_path = 'data/openalex/raw/publishers.jsonl'
 	output_path = 'data/openalex/publishers.json'
 
-	if verbose:
-		print('  Download...')
-
 	if not os.path.exists(raw_path):
 		import_raw('https://openalex.s3.amazonaws.com/data/publishers', raw_path)
-
-	if verbose:
-		print('  Process...')
 
 	if os.path.exists(output_path):
 		os.remove(output_path)
@@ -124,6 +115,9 @@ def process_publishers(verbose: bool = False) -> tuple[
 			publishers[sub['parent']]['titles'] + [sub['title']] + sub['titles']
 		)
 
+	publishers['P4310320990']['title'] = 'Elsevier'
+	publishers['P4310320990']['titles'] = remove_duplicates(['Elsevier BV'] + publishers['P4310320990']['titles'])
+
 	with open(output_path, 'w', encoding='utf-8') as out_file:
 		out_file.write(json.dumps(publishers) + '\n')
 
@@ -136,20 +130,11 @@ def process_journals(
 	institutions: dict[str, dict[str, Any]],
 	verbose: bool = False,
 ) -> dict[str, dict[str, Any]]:
-	if verbose:
-		print('Journals...')
-
 	raw_path = 'data/openalex/raw/journals.jsonl'
 	output_path = 'data/openalex/journals.json'
 
-	if verbose:
-		print('  Download...')
-
 	if not os.path.exists(raw_path):
 		import_raw('https://openalex.s3.amazonaws.com/data/sources', raw_path)
-
-	if verbose:
-		print('  Process...')
 
 	if os.path.exists(output_path):
 		os.remove(output_path)
@@ -206,18 +191,23 @@ def process_journals(
 
 			journals[id] = {
 				'id': id,
+				'scopus_id': None,
 				'issns': [clean_issn(issn) for issn in get_list(raw_entry, 'issn')],
 				'title': title,
 				'titles': clean_list(
 					get_list(raw_entry, 'alternate_titles') +
 					[raw_entry.get('abbreviated_title')]
 				),
+				'active': None,
+				'in_scopus': None,
+				'last_year': None,
 				'publisher': publisher,
-				'metrics': {
-					'if': get_dict(raw_entry, 'summary_stats').get('2yr_mean_citedness'),
-					'h': h,
-				},
+				'fields': [],
 				'link': raw_entry.get('homepage_url'),
+				'metrics': {
+					'if': [get_dict(raw_entry, 'summary_stats').get('2yr_mean_citedness')],
+					'h': [h],
+				},
 			}
 
 	with open(output_path, 'w', encoding='utf-8') as out_file:
@@ -250,7 +240,7 @@ def get_data(verbose: bool = False) -> tuple[dict[str, dict[str, Any]], dict[str
 		if not os.path.exists('data/openalex/raw'):
 			os.makedirs('data/openalex/raw')
 
-		publishers, sub_publishers, institutions = process_publishers(verbose)
+		publishers, sub_publishers, institutions = process_publishers()
 		journals = process_journals(publishers, sub_publishers, institutions, verbose)
 
 	print(f'Loaded {len(journals):,} journals and {len(publishers):,} publishers')

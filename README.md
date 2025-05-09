@@ -1,7 +1,7 @@
 # 📚 Papermap Data
 
 ![Language](https://img.shields.io/badge/Language-Python-f2cb1b)
-![Size](https://img.shields.io/badge/Size-0Mo-f12222)
+![Size](https://img.shields.io/badge/Size-412Mo-f12222)
 ![Open Source](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)
 
 <br/>
@@ -13,7 +13,7 @@ This repository contains the code to generate the **[Papermap](https://github.co
 # 📋 Summary
 
 * **[📋 Summary](#-summary)**
-* **[🗃️ Data](#-data)**
+* **[🗃️ Data](#%EF%B8%8F-data)**
 * **[📊 Metrics](#-metrics)**
 * **[🧮 Score](#-score)**
 * **[🏆 Results](#-results)**

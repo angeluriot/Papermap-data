@@ -1,0 +1,7 @@
+/venv
+/data/openalex/raw
+__pycache__
+.DS_Store
+/show.ipynb
+/tests.ipynb
+/notes.txt
